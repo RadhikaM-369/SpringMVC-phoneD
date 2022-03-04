@@ -30,6 +30,7 @@ public class WebBean {
 
 		ContactEntity entity = new ContactEntity(contactDto.getName(), contactDto.getMobile(), contactDto.getAddress(),
 				contactDto.getLandmark(), contactDto.getLandlineNo(), contactDto.getCity(), contactDto.getPincode());
+		System.out.println(contactDto.toString());
 		boolean checkValidity = contactServiceImpl.validateAndSave(entity);
 		if (checkValidity = true) {
 			System.out.println("All properties are valid");
